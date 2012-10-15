@@ -1,13 +1,13 @@
 %% Much of this code was adapted from the code completed for the Coursera Machine Learning class. 
-%% This neural network has two hidden layers, sized 150 and 300. Otherwise standard. 
-%% Provided weights "weights.mat" are trained on the 60000 training set and receive 97.1% accuracy on MNIST test set. 
+%% This neural network has two hidden layers, sized 410 and 100. Otherwise standard. 
+%% Provided weights "weights.mat" are trained on the 60000 training set and receive 97.49% accuracy on MNIST test set. 
 
 
 clear ; close all; clc
 
 input_layer_size  = 784;  % 28 x 28  input image
-hidden_layer1_size = 400; % 100 units in first hidden layer
-hidden_layer2_size = 50; % 25 units in second hidden layer
+hidden_layer1_size = 410; % 410 units in first hidden layer
+hidden_layer2_size = 100; % 100 units in second hidden layer
 num_labels = 10;          % 10 digits, or num_labels
 
 
@@ -53,10 +53,10 @@ end
 
 %  After you have completed the assignment, change the MaxIter to a larger
 %  value to see how more training helps.
-options = optimset('MaxIter', 100);
+options = optimset('MaxIter', 500);
 
 % Regularization parameter:
-lambda = 5;
+lambda = 6;
 
 % Create "short hand" for the cost function to be minimized
 costFunction = @(p) nnCostFunction(p, input_layer_size, hidden_layer1_size, hidden_layer2_size, num_labels, X, y, lambda);
