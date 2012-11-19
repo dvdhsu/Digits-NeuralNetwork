@@ -50,9 +50,6 @@ for i = 1:10
   pos = pos + sizes(i);
 end
 
-
-%  After you have completed the assignment, change the MaxIter to a larger
-%  value to see how more training helps.
 options = optimset('MaxIter', 500);
 
 % Regularization parameter:
