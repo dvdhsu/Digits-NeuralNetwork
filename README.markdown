@@ -1,7 +1,14 @@
-# Neural Network for MNIST testset
+# MNIST Digits Neural Network
 
-This neural network contains four layers: a 784 node input layer, a 400 node hidden layer, a 50 node hidden layer, and a 10 node output layer. 
+This neural network contains two hidden layers, trains on on [Yann LeCun's MNIST training set](http://yann.lecun.com/exdb/mnist/), and scores reasonably (97.49 with the provided weights) on on [Yann LeCun's MNIST test set](http://yann.lecun.com/exdb/mnist/). To train the neural network yourself, run digits.m in Octave. There are a few parameters you can set:
 
-With the provided weights.mat (found through training as provided in train.m), this neural network scores a 97.49 on [Yann LeCun's MNIST set](http://yann.lecun.com/exdb/mnist/).
+* Hidden layer dimensions: Default is 410 and 100; this can be changed in digits.m, line 9 and 10. 
 
-To train and test the neural network yourself, launch Octave and run digits.m. 
+* Number of iterations: Default is 500, which can take a long time. This can be changed in digits.m, line 53.
+
+* Regularization parameter (lambda): Default is 6. This can be changed in digits.m, line 56. 
+
+Once the training is complete, the test set accuracy will be calculated and printed. After the program has finished, you can save your weights by running the command "save [filename] Theta1 Theta2 Theta3". To load the saved data, run the command "load [filename]". 
+
+Much thanks to [Sam Roweis](http://www.cs.nyu.edu/~roweis/) for the [data](http://www.cs.nyu.edu/~roweis/data.html) in MATLAB format. 
+
