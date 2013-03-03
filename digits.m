@@ -1,5 +1,5 @@
 %% Much of this code was adapted from the code completed for the Coursera Machine Learning class. 
-%% This neural network has two hidden layers, sized 410 and 100. Otherwise standard. 
+%% This neural network has two hidden layers, sized 410 and 100. 
 %% Provided weights "weights.mat" are trained on the 60000 training set and receive 97.49% accuracy on MNIST test set. 
 
 
